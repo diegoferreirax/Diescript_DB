@@ -1,5 +1,10 @@
 use FinancasDB
 
+-- busca usuarios
+select * from Usuario
+
+SELECT IdUsuario, Login, Senha, Nome, Salario, TipoContrato FROM Usuario WHERE Login = 'diego' and Senha = 'diego123'
+
 -- cadastro/busca categoria - Nome
 select * from Categoria
 
@@ -13,28 +18,28 @@ select * from Usuario
 insert into Usuario values ('ferreira', 'ferreira123', 'Ferreira', 3440, 'clt')
 
 
--- cadastro/busca ano - Ano/AnoString/IdUsuarioRef
+-- cadastro/busca ano - Ano/IdUsuarioRef
 select * from Ano
 select * from Ano WHERE IdUsuarioRef = 10002
 
-insert into Ano values ('2020-01-01', '2020', 10002)
+insert into Ano values ('2020-01-01', 10002)
 
 
--- cadastro/busca mês - Mes/MesString/IdAnoRef
+-- cadastro/busca mês - Mes/IdAnoRef
 select * from Mes
 
-insert into Mes values ('2020-01-01', '01', 10002)
-insert into Mes values ('2020-02-01', '02', 10002)
-insert into Mes values ('2020-03-01', '03', 10002)
-insert into Mes values ('2020-04-01', '04', 10002)
-insert into Mes values ('2020-05-01', '05', 10002)
-insert into Mes values ('2020-06-01', '06', 10002)
-insert into Mes values ('2020-07-01', '07', 10002)
-insert into Mes values ('2020-08-01', '08', 10002)
-insert into Mes values ('2020-09-01', '09', 10002)
-insert into Mes values ('2020-10-01', '10', 10002)
-insert into Mes values ('2020-11-01', '11', 10002)
-insert into Mes values ('2020-12-01', '12', 10002)
+insert into Mes values ('2020-01-01', 10002)
+insert into Mes values ('2020-02-01', 10002)
+insert into Mes values ('2020-03-01', 10002)
+insert into Mes values ('2020-04-01', 10002)
+insert into Mes values ('2020-05-01', 10002)
+insert into Mes values ('2020-06-01', 10002)
+insert into Mes values ('2020-07-01', 10002)
+insert into Mes values ('2020-08-01', 10002)
+insert into Mes values ('2020-09-01', 10002)
+insert into Mes values ('2020-10-01', 10002)
+insert into Mes values ('2020-11-01', 10002)
+insert into Mes values ('2020-12-01', 10002)
 
 
 -- cadastro/busca conta diversa - Nome/Valor/DataCompra/IdCategoriaRef_ContaDiversa/IdMesRef_ContaDiversa
